@@ -1,0 +1,27 @@
+/*
+
+PSUEDOCODE
+
+game initials a board of 4x4 (16) facedown cards.
+
+player is prompted to click cards and make matches.
+
+as soon as player clicks a card a timer begins as the card is "flipped" or revealed, counting up to see how much time the player takes to finish a game.
+
+with each additional card click and reveal, a counter increases by one, indicated how many total moves the player has made.
+
+for every 2 cards revealed, the cards are checked to be matching, and if so, are left revealed.  if not matching, are turned back over.
+
+once all cards are revealed and matched, the timer stops and the a message states how many moves and in how much time the player took for the game.
+
+reset button at bottom of the screen to play again.
+
+
+
+
+
+
+
+
+
+*/

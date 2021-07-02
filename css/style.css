@@ -1,0 +1,53 @@
+body {
+    background-color: rgb(129, 215, 227);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+img {
+    width: 12vmin;
+}
+
+
+.all-cards {
+    border: 2px solid black;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-style: preserve-3d;
+    transition: .5s;
+    margin: 10px;
+}
+
+.board {
+    padding: 20px;
+    border: 2px solid black;
+    display: grid;
+    grid-template-rows: repeat(4, 20vmin);
+    grid-template-columns: repeat(4, 20vmin);
+    grid-gap: 0vmin;
+    perspective: 1000px;
+}
+  
+.all-cards:active {
+    transform: scale(.97);
+    transition: transform .2s;
+}
+
+.all-cards.flipped {
+    transform: rotateY(180deg);
+}
+
+.front, .back {
+    width: 80%;
+    padding: 10px;
+    backface-visibility: hidden;
+}
+
+.front {
+    transform: rotateY(180deg)
+}
