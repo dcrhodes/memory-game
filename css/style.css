@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(129, 215, 227);
+    background-color: skyblue;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -7,28 +7,27 @@ body {
     flex-direction: column;
 }
 
-img {
-    width: 12vmin;
-}
-
-
 .all-cards {
+    background-color: rgb(230, 230, 32);
     border: 2px solid black;
     border-radius: 15px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     transform-style: preserve-3d;
     transition: .5s;
     margin: 10px;
 }
 
+.logo {
+    width: 50%;
+}
+
 .board {
     padding: 20px;
-    border: 2px solid black;
     display: grid;
-    grid-template-rows: repeat(4, 20vmin);
-    grid-template-columns: repeat(4, 20vmin);
+    grid-template-rows: repeat(6, 10vmin);
+    grid-template-columns: repeat(6, 10vmin);
     grid-gap: 0vmin;
     perspective: 1000px;
 }
@@ -40,14 +39,16 @@ img {
 
 .all-cards.flipped {
     transform: rotateY(180deg);
+    justify-content: flex-start;
+
 }
 
 .front, .back {
-    width: 80%;
-    padding: 10px;
+    width: 100%;
     backface-visibility: hidden;
 }
 
 .front {
     transform: rotateY(180deg)
 }
+
