@@ -1,10 +1,17 @@
 body {
+    font-family: 'Walter Turncoat', cursive;
     background-color: skyblue;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+.container {
+    display: flex;
+    width: 80%;
+    justify-content: space-evenly;
 }
 
 .all-cards {
@@ -52,3 +59,23 @@ body {
     transform: rotateY(180deg)
 }
 
+.buttons {
+    display: flex;
+    width: 80%;
+    justify-content: space-evenly;
+}
+
+
+
+
+
+#grats{
+    animation:blinkingText .5s infinite;
+}
+@keyframes blinkingText{
+    0%{     color: rgb(230, 230, 32);    }
+    49%{    color: #000; }
+    60%{    color: transparent; }
+    99%{    color:transparent;  }
+    100%{   color: #000;    }
+}

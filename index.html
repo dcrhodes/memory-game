@@ -7,11 +7,19 @@
     <script defer src="js/app.js"></script>
     <link rel= "stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <title>Memory Game</title>
+    <link rel="icon" 
+      type="image/png" 
+      href="images/donut.png">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Walter+Turncoat&display=swap">
+    <title>The Simpsons&#8482; Memory Game</title>
 </head>
 <body>
     <img class="logo" src="/images/logo.png">
-    <h2>Match your favorite characters!</h2>
+    <h2 id="message">Match your favorite characters!</h2>
+    <div class="container">
+        <div><h3 id="moves">Moves: 0</h3></div>
+        <div><h3 id="timer">Time: 0:00</h3></div>
+    </div>
     <section class="board">
         <div class="all-cards" data-char="bart">
             <img class="front" src="images/heads/bart.png">
@@ -157,11 +165,10 @@
             <img class="front" src="images/heads/nelson.png">
             <img class="back" src="images/donut.png">
         </div>
-        
     </section>
-    <p>
+    <div class="buttons">
         <button type="button" id="reset">Reset</button>
         <button type="button" id="mute">Mute</button>
-    </p>
+    </div>
 </body>
 </html>
