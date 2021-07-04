@@ -30,9 +30,9 @@ document.getElementById('reset').addEventListener('click', function(){
 
 // detach into separate function
 document.getElementById('mute').addEventListener('click', function(){
-        doh = new Audio('/sounds/doh.mp3').muted
-        woohoo = new Audio('/sounds/woohoo.mp3').muted
-        wintheme = new Audio('/sounds/wintheme.mp3').muted
+        doh.volume = 0
+        woohoo.volume = 0
+        wintheme.volume = 0
 })
 
 // <----------------------- FUNCTIONS ----------------------->
@@ -96,12 +96,12 @@ function reset(){
 
 // this function assigns a number 1-36 to each card and randomizes their order within the board div.  wrapping this function in parantheses cause it to become immediately invoked when the page is loaded
 
-(function scramble(){
-    cards.forEach(card => {
-        let random = Math.floor(Math.random() * 36)
-        card.style.order = random
-    })
-})();
+// (function scramble(){
+//     cards.forEach(card => {
+//         let random = Math.floor(Math.random() * 36)
+//         card.style.order = random
+//     })
+// })();
 
 function startTimer(){
     interval = setInterval(() => {
