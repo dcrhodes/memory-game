@@ -11,6 +11,7 @@ let firstCard, secondCard
 let doh = new Audio('/sounds/doh.mp3')
 let woohoo = new Audio('/sounds/woohoo.mp3')
 let wintheme = new Audio('/sounds/wintheme.mp3')
+let mute = false
 let moves = 0
 let time = 0
 let min = 0
@@ -18,7 +19,7 @@ let sec = 0
 
 
 // <----------------------- LISTENERS ----------------------->
-//this listener
+//this listener invokes the flip function when a card is clicked
 cards.forEach(card => card.addEventListener('click', flip))
 
 
@@ -29,17 +30,15 @@ document.getElementById('reset').addEventListener('click', function(){
 
 // detach into separate function
 document.getElementById('mute').addEventListener('click', function(){
-    doh = new Audio('/sounds/doh.mp3').muted
-    woohoo = new Audio('/sounds/woohoo.mp3').muted
-    wintheme = new Audio('/sounds/wintheme.mp3').muted
+        doh = new Audio('/sounds/doh.mp3').muted
+        woohoo = new Audio('/sounds/woohoo.mp3').muted
+        wintheme = new Audio('/sounds/wintheme.mp3').muted
 })
 
 // <----------------------- FUNCTIONS ----------------------->
 function flip() {
     //returns to the end the function if the board is in a "frozen = true" status, which prevents any cards from being clicked while a unmatched pair is revealed on the board.
     if (frozen) return
-
-   
 
     //returns to end the function if the second clicked card has been marked as the first card.  this prevents being able to double-click a card and cause a bug where the event listener is removed before a second card is clicked.
     if (this === firstCard) return
@@ -66,11 +65,9 @@ function flip() {
     if (firstCard.dataset.char === secondCard.dataset.char){
         firstCard.removeEventListener('click', flip)
         secondCard.removeEventListener('click', flip)
-        //
-        //
-        woohoo.play()
         winCondition++
         reset()
+        woohoo.play()
         if (winCondition === 18){
             winner()
         }
@@ -97,7 +94,7 @@ function reset(){
     secondCard = null
 }
 
-this function assigns a number 1-36 to each card and randomizes their order within the board div.  wrapping this function in parantheses cause it to become immediately invoked when the page is loaded
+// this function assigns a number 1-36 to each card and randomizes their order within the board div.  wrapping this function in parantheses cause it to become immediately invoked when the page is loaded
 
 (function scramble(){
     cards.forEach(card => {
@@ -105,7 +102,6 @@ this function assigns a number 1-36 to each card and randomizes their order with
         card.style.order = random
     })
 })();
-
 
 function startTimer(){
     interval = setInterval(() => {
@@ -131,7 +127,11 @@ function winner(){
     wintheme.play()
     clearInterval(interval)
 
-    document.getElementById('message').innerHTML = `<center><span id="grats">Congratulations!</span><br>You found everyone in:<br> ${min} minutes and ${sec} seconds with ${moves} moves!</center>`
+    if (min === 0){
+        document.getElementById('message').innerHTML = `<center><span id="grats">Congratulations!</span><br>You found everyone in:<br> ${sec} seconds with ${moves} moves!</center>`
+    } else {
+        document.getElementById('message').innerHTML = `<center><span   id="grats">Congratulations!</span><br>You found everyone in:<br> ${min}   minutes and ${sec} seconds with ${moves} moves!</center>`
+    }
     
     document.getElementById('moves').innerHTML = ''
     document.getElementById('timer').innerHTML = ''

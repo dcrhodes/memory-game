@@ -40,14 +40,17 @@ body {
 }
   
 .all-cards:active {
-    transform: scale(.97);
-    transition: transform .2s;
+    transform: scale(.90);
+    transition: transform .1s;
+}
+
+.all-cards:hover{
+    background-color: rgb(249, 133, 152);
 }
 
 .all-cards.flipped {
     transform: rotateY(180deg);
     justify-content: flex-start;
-
 }
 
 .front, .back {
@@ -72,7 +75,14 @@ body {
     border-radius: 10px;
 }
 
+#reset:hover, #mute:hover {
+    background-color: rgb(208, 74, 190);
+}
 
+#reset:active, #mute:active {
+    transform: scale(.90);
+    transition: transform .1s;
+}
 
 #grats{
     animation:blinkingText .5s infinite;
