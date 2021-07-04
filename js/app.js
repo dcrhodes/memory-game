@@ -66,6 +66,8 @@ function flip() {
     if (firstCard.dataset.char === secondCard.dataset.char){
         firstCard.removeEventListener('click', flip)
         secondCard.removeEventListener('click', flip)
+        //
+        //
         woohoo.play()
         winCondition++
         reset()
@@ -95,14 +97,14 @@ function reset(){
     secondCard = null
 }
 
-//this function assigns a number 1-36 to each card and randomizes their order within the board div.  wrapping this function in parantheses cause it to become immediately invoked when the page is loaded
+this function assigns a number 1-36 to each card and randomizes their order within the board div.  wrapping this function in parantheses cause it to become immediately invoked when the page is loaded
 
-// (function scramble(){
-//     cards.forEach(card => {
-//         let random = Math.floor(Math.random() * 36)
-//         card.style.order = random
-//     })
-// })();
+(function scramble(){
+    cards.forEach(card => {
+        let random = Math.floor(Math.random() * 36)
+        card.style.order = random
+    })
+})();
 
 
 function startTimer(){

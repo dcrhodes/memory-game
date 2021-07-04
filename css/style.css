@@ -1,5 +1,5 @@
 body {
-    font-family: 'Walter Turncoat', cursive;
+    font-family: 'Walter Turncoat', sans-serif;
     background-color: skyblue;
     height: 100vh;
     display: flex;
@@ -65,7 +65,12 @@ body {
     justify-content: space-evenly;
 }
 
-
+#reset, #mute {
+    font-family: 'Walter Turncoat', cursive;
+    font-size: 20px;
+    background-color: rgb(249, 133, 152);
+    border-radius: 10px;
+}
 
 
 
