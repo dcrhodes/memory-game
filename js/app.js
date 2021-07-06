@@ -17,6 +17,11 @@ let time = 0
 let min = 0
 let sec = 0
 
+doh.volume = 0.5
+woohoo.volume = 0.5
+wintheme.volume = 0.5
+
+
 
 // <----------------------- LISTENERS ----------------------->
 //this listener invokes the flip function when a card is clicked
@@ -136,3 +141,6 @@ function winner(){
     document.getElementById('moves').innerHTML = ''
     document.getElementById('timer').innerHTML = ''
 }
+
+
+

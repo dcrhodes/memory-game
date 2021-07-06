@@ -1,7 +1,7 @@
 body {
     font-family: 'Walter Turncoat', sans-serif;
     background-color: skyblue;
-    height: 100vh;
+    height: 95vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -56,10 +56,13 @@ body {
 .front, .back {
     width: 100%;
     backface-visibility: hidden;
+    position: absolute;
+
 }
 
 .front {
     transform: rotateY(180deg)
+    /* backface-visibility: hidden; */
 }
 
 .buttons {
@@ -84,6 +87,7 @@ body {
     transition: transform .1s;
 }
 
+/* the following css allows the congratulations text to flash when the game is won */
 #grats{
     animation:blinkingText .5s infinite;
 }
