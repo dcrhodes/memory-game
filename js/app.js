@@ -52,11 +52,11 @@ function flip() {
     // This adds the "flipped" class to any clicked and flipped cards.
     this.classList.add('flipped')
 
-    // This assigns whether card is the first or second to be flippedm while also increasing and displaying "moves" by one for each pair attempt made by the player
+    // This assigns whether card is the first or second to be flipped, while also increasing and displaying "moves" by one for each pair attempt made by the player
     if (!hasCardFlipped) {
         hasCardFlipped = true
         firstCard = this
-        // The will start the game timer only when this clicked card is the first the player has interacted with.
+        // This will start the game timer only when the clicked card is the first card the player has interacted with.
         if (moves === 0){
             startTimer() 
         }
@@ -130,13 +130,11 @@ function startTimer(){
 function winner(){
     wintheme.play()
     clearInterval(interval)
-
     if (min === 0){
         document.getElementById('message').innerHTML = `<center><span id="grats">Congratulations!</span><br>You found everyone in:<br> ${sec} seconds with ${moves} moves!</center>`
     } else {
         document.getElementById('message').innerHTML = `<center><span   id="grats">Congratulations!</span><br>You found everyone in:<br> ${min}   minutes and ${sec} seconds with ${moves} moves!</center>`
     }
-    
     document.getElementById('moves').innerHTML = ''
     document.getElementById('timer').innerHTML = ''
 }
