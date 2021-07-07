@@ -4,15 +4,15 @@ This is a card-matching memory game themed around The Simpsons&trade;, a propert
 
 ## Getting Started:
 
-[title]https://mellow-ball.surge.sh
-[title]https://dcrhodes.github.io/memory-game/ [**]
+<https://mellow-ball.surge.sh>
+<https://dcrhodes.github.io/memory-game/> [*]
 
 Gameplay will be initialized by the player clicking on any card, which will flip to reveal it's face and start the game timer.  The player then clicks additional cards until matching card faces can be found.  When the board is cleared and all cards are match, the game ends, and the total amount of time and card match attempts (moves) will be displayed.  The player can then replay the game to beat their score.
 
-[**] GitHub Pages does not allow the audio to function properly.  This link has been provided as a strictly visual version to be automatically updated from the GitHUb repository.  The previous Surge link will demonstrate full functionality.
+[*] GitHub Pages does not allow the audio to function properly.  This link has been provided as a strictly visual version to be automatically updated from the GitHUb repository.  The previous Surge link will demonstrate full functionality.
 
 ## Screenshots:
-
+To Be Added.
 
 
 ## Technologies Used:
