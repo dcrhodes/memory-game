@@ -1,4 +1,4 @@
-# The Simpsons Memory Card-Matching Game
+# The Simpsons&trade; Memory Game
 
 This is a card-matching memory game themed around The Simpsons&trade;, a property of The Walt Disney Company.  This game was built as an educational project for General Assembly in 2021.  I chose to create a card-matching memory game to learn more and demonstrate my knowledge of JavaScript DOM manipulation and to practice more CSS positioning.  The Simpsons&trade; theme was chosen to have an exciting, vibrant color scheme and familiar imagery to work with.  This show was a favorite of mine throughout my childhood in the '90s.
 
