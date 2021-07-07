@@ -10,11 +10,10 @@ This is a card-matching memory game themed around The Simpsons&trade;, a propert
 
 Gameplay will be initialized by the player clicking on any card, which will flip to reveal it's face and start the game timer.  The player then clicks additional cards until matching card faces can be found.  When the board is cleared and all cards are match, the game ends, and the total amount of time and card match attempts (moves) will be displayed.  The player can then replay the game to beat their score.
 
-[*] <font size=2>GitHub Pages does not allow the audio to function properly.  This link has been provided as a strictly visual version to be automatically updated from the GitHUb repository.  The previous Surge link will demonstrate full functionality.</font>
+[*] *GitHub Pages does not allow the audio to function properly.  This link has been provided as a strictly visual version to be automatically updated from the GitHUb repository.  The previous Surge link will demonstrate full functionality.*
 
 ## Screenshots:
-To Be Added.
-
+![The Simpsons Memory Game](https://i.imgur.com/Z9nA69s.png)
 
 ## Technologies Used:
 - HTML

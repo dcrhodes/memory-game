@@ -102,12 +102,16 @@ function reset(){
 }
 
 // This function assigns a random number 1-36 to each card and randomizes their order within the board div. Wrapping this function in parantheses cause it to become immediately invoked when the page is loaded, rather than havign to type out 'scramble()' elsewhere in the script.
-(function scramble(){
-    cards.forEach(card => {
-        let random = Math.floor(Math.random() * 36)
-        card.style.order = random
-    })
-})();
+
+
+
+
+//(function scramble(){
+//     cards.forEach(card => {
+//         let random = Math.floor(Math.random() * 36)
+//         card.style.order = random
+//     })
+// })();
 
 // This function starts the game timer when invoked, then displays it to the player.  The timer does not start until the player clicks their first card.
 function startTimer(){

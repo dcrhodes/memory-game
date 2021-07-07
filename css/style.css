@@ -14,7 +14,8 @@ header {
     align-items: center;
     flex-direction: column;
     position: relative;
-    margin-top: 100px;
+    margin-top: 50px;
+    margin-bottom: -50px;
 }
 
 .container {
@@ -22,6 +23,7 @@ header {
     width: 80%;
     justify-content: space-evenly;
     width: 60vmin;
+    margin: -20px 0;
 }
 
 .all-cards {
@@ -78,8 +80,9 @@ header {
 
 .buttons {
     display: flex;
-    width: 80%;
+    width: 60vmin;
     justify-content: space-evenly;
+    padding-bottom: 20px;
 }
 
 #reset, #mute {
@@ -100,12 +103,12 @@ header {
 
 /* the following css allows the congratulations text to flash when the game is won */
 #grats{
-    animation:blinkingText .5s infinite;
+    animation:blinkingText .3s infinite;
 }
 @keyframes blinkingText{
     0%{     color: rgb(230, 230, 32);    }
     49%{    color: #000; }
     60%{    color: transparent; }
-    99%{    color:transparent;  }
-    100%{   color: #000;    }
+    99%{    color: transparent; }
+    100%{   color: #000; }
 }
