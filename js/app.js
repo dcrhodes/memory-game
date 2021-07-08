@@ -106,12 +106,12 @@ function reset(){
 
 
 
-//(function scramble(){
-//     cards.forEach(card => {
-//         let random = Math.floor(Math.random() * 36)
-//         card.style.order = random
-//     })
-// })();
+(function scramble(){
+    cards.forEach(card => {
+        let random = Math.floor(Math.random() * 36)
+        card.style.order = random
+    })
+})();
 
 // This function starts the game timer when invoked, then displays it to the player.  The timer does not start until the player clicks their first card.
 function startTimer(){

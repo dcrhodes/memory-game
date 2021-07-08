@@ -14,6 +14,7 @@ Gameplay will be initialized by the player clicking on any card, which will flip
 
 ## Screenshots:
 ![The Simpsons Memory Game](https://i.imgur.com/Z9nA69s.png)
+![The Simpsons Memory Game](https://i.imgur.com/XyVaRpl.png)
 
 ## Technologies Used:
 - HTML
